@@ -14,15 +14,15 @@
 #     t.file <- "http://stat.ethz.ch/Teaching/Datasets/NDK/d.fuel.dat"
 #     d.fuel <- read.table(t.file,header=T,sep=",")
 #     Das Argument sep="," braucht es, weil die Kolonnen im File d.fuel.dat 
-#     durch Kommata getrennt sind. Sie konnen ¨ ubrigens ¨ den Inhalt des 
-#     Files d.fuel.dat mit einem Internetbrowser anschauen, indem Sie die 
-#     obige URL in Ihren Browser eintippen.
+#     durch Kommata getrennt sind. Sie können übrigens den Inhalt des Files 
+#     d.fuel.dat mit einem Internetbrowser anschauen, indem Sie die obige URL 
+#     in Ihren Browser eintippen.
+
+d.fuel <- read.table("d.fuel.dat",header=T,sep=",")
 
 # Anmerkung zur Lösung: 
-#   Das File d.fuel.dat wurde heruntergeladen und im selben Ordner wie diese 
-#   Datei gespeichert. 
-
-Lösung
+#   Das File d.fuel.dat wurde heruntergeladen und Arbeitspfad gespeichert. 
+#   Daher muss beim Einlesen der Daten kein Pfad angegeben werden. 
 
 # 1b) Betrachten Sie die eingelesenen Daten.
 #     Im File d.fuel.dat wurden die Zeilen durchnumeriert und daher steht in 
@@ -34,76 +34,91 @@ Lösung
 #               (1 gallon = 3.789 l; 1 mile = 1.6093 km)
 #       type:   Autotyp
 
-Lösung
+d.fuel
 
 # 1c) Wählen Sie nur die fünfte Zeile des Dataframe d.fuel aus. Welche Werte 
 #     stehen in der fünften Zeile?
 
-Lösung
+d.fuel[5,]
 
 # 1d) Wählen Sie nun die erste bis fünfte Beobachtung des Datensatzes aus.
 #     So lässt sich übrigens bei einem unbekannten Datensatz ein schneller 
 #     Überblick über die Art des Dataframe gewinnen.
 
-Lösung
+d.fuel[1:5,]
 
 # 1e) Zeigen Sie gleichzeitig die 1. bis 3. und die 57. bis 60. Beobachtung 
 #     des Datensatzes an.
 
-Lösung
+d.fuel[c(1:3,57:60),]
 
 # 1f) Berechnen Sie den Mittelwert der Reichweiten aller Autos in Miles/Gallon.
 
-Lösung
+mean(d.fuel[,"mpg"])
 
 # 1g) Berechnen Sie den Mittelwert der Reichweite der Autos 7 bis 22.
 
-Lösung
+mean(d.fuel[7:22,"mpg"])
 
 # 1h) Erzeugen Sie einen neuen Vektor t.kml, der alle Reichweiten in km/l, und 
 #     einen Vektor t.kg, der alle Gewichte in kg enthalt. ¨
 
-Lösung
+t.kml <- d.fuel[,"mpg"]*1.6093/3.789
+t.kg  <- d.fuel[,"weight"]*0.45359
 
 # 1i) Berechnen Sie den Mittelwert der Reichweiten in km/l und denjenigen der 
 #     Fahrzeuggewichte in kg.
 
-Lösung
+mean(t.kml)
+mean(t.kg)
 
 # 1j) Zeichnen Sie ein Streudiagramm, welches den Verbrauch pro 100km als 
 #     Funktion des Gewichtes in kg darstellt.
 
-Lösung
+t.lkm <- 100/t.kml
+plot(t.kg,t.lkm,xlab="Gewicht [kg]",ylab="Verbrauch[l/100km]")
 
 # 1k) Machen Sie eine Stamm-Blatt-Darstellung der Benzinverbräuche pro 100 km. 
 #     Bestimmen Sie den minimalen und maximalen Verbrauch.
 #     R-Hinweis: stem()
 
-Lösung
+stem(t.lkm)
+min(t.lkm)
+max(t.lkm)
 
 # 1l) Zeichnen Sie zuerst ein Histogramm des Verbrauchs der Autos (pro 100km) 
 #     mit den Defaulteinstellungen und dann ein Histogramm mit 15 Klassen 
 #     statt nur 8, einer x-Achse von 0 bis 15 und einem Titel.
 
-Lösung
+hist(t.lkm)
+hist(t.lkm,nclass=15,xlim=c(0,15),
+     main="Verteilung des Verbrauchs verschiedener Autos",
+     xlab="Verbrauch [l/100km]",ylab="Häufigkeit")
 
 # 1m) Zeichnen Sie einen Boxplot der Benzinverbräuche.
 #     R-Hinweis: boxplot()
 
-Lösung
+boxplot(t.lkm)
 
 # 1n) Vergleichen Sie die Standardabweichung und den MAD der Benzinverbräuche 
 #     miteinander (vgl. Stat. Datenanalyse, Kap. 2.3).
 #     R-Hinweis: mad(), sd()
 
-Lösung
+mad(t.lkm)
+sd(t.lkm)
+
+# Anmerkung zu Lösung
+#   Man könnte mit dem Folgenden Befehl beide Werte miteinander ausgeben. 
+#   c(mad(t.lkm),sd(t.lkm))
 
 # 1o) Vergleichen Sie den Mittelwert und den Median der Benzinverbräuche in 
 #     l/100km.
 
-Lösung
+mean(t.lkm)
+median(t.lkm)
 
 # 2. Korrelationen (R-Funktion: cor())
+
 # 2a) Erzeugen Sie den Vektor t.x mit den Werten -10,-9,...,9,10 und den 
 #     Vektor t.x1 mit den Werten 0,1,...,9,10.
 #     Erzeugen Sie dann die Vektoren t.y und t.y1, deren Elemente die 
