@@ -124,12 +124,19 @@ median(t.lkm)
 #     Erzeugen Sie dann die Vektoren t.y und t.y1, deren Elemente die 
 #     Quadratwerte der entsprechenden Elemente von t.x bzw. t.x1 enthalten.
 
-Lösung
+t.x <- seq(-10,10)
+t.x1 <- seq(0,10)
+t.y <- t.x^2
+t.y1 <- t.x1^2
 
 # 2b) Zeichnen Sie die Streudiagramme t.y vs. t.x und t.y1 vs t.x1 .
 
-Lösung
+plot(t.x,t.y)
+plot(t.x1,t.y1)
 
 # 2c) Berechnen Sie die Korrelationskoeffzienten zwischen t.x und t.y bzw. 
 #     zwischen t.x1 und t.y1. Warum sind die beiden Korrelationen so 
 #     verschieden (vgl. Stat. Datenanalyse, Abschnitt 3.2.h)?
+
+cor(t.x,t.y)
+cor(t.x1,t.y1)
