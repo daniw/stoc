@@ -14,3 +14,16 @@ median(flaech)
 mean(flaech)
 sd(flaech)
 
+
+# Aufgabe 2
+# =========
+# Daten
+x <- c(2,2,6,7,7,8,8,9)
+y <- c(11,14,14,16,27,27,27,38)
+
+# a)
+sum(x)
+sum(x^2)
+sum(y)
+sum(y^2)
+sum(x*y)
