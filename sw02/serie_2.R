@@ -39,7 +39,18 @@ par(mfrow = c(2,2)) ## 4 Grafiken im Grafikfenster
 hist(geysir[,"Zeitspanne"])
 hist(geysir[,"Zeitspanne"], breaks = 20)
 hist(geysir[,"Zeitspanne"], breaks = seq(41, 96, by = 11))
-# 
+# Es gibt zwei Anhäufungen von Zeitapannen. 
+# Speziell fällt auf, dass beim letzten Diagramm eine der beidem Anhäufungen 
+# verschwindet. Daher ist die letze Darstellung nicht brauchbar. 
 
 # b)
 hist(geysir[,"Eruptionsdauer"])
+# Es fällt auf, dass ebenfalls zwei Anhäufungen existieren. Um zu klären, ob 
+# zwischen der Zeitspanne und der Eruptionsdauer ein Zusammenhang besteht, wird 
+# ein Streudiagramm erstellt
+plot(geysir[,"Zeitspanne"],geysir[,"Eruptionsdauer"])
+# Dabei wird ersichtlich, dass tatsächlich ein Zusammenhang zwischen der 
+# Zeitspanne und der Eruptionsdauer besteht. Ein ähnliches Resultat erhält man, 
+# wenn die Korrelation zwischen der Zeitspanne und der Rruptionsdauer berechnet 
+# wird.   
+cor(geysir[,"Zeitspanne"],geysir[,"Eruptionsdauer"])
