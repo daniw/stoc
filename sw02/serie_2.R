@@ -51,6 +51,26 @@ hist(geysir[,"Eruptionsdauer"])
 plot(geysir[,"Zeitspanne"],geysir[,"Eruptionsdauer"])
 # Dabei wird ersichtlich, dass tatsächlich ein Zusammenhang zwischen der 
 # Zeitspanne und der Eruptionsdauer besteht. Ein ähnliches Resultat erhält man, 
-# wenn die Korrelation zwischen der Zeitspanne und der Rruptionsdauer berechnet 
+# wenn die Korrelation zwischen der Zeitspanne und der Eruptionsdauer berechnet 
 # wird.   
 cor(geysir[,"Zeitspanne"],geysir[,"Eruptionsdauer"])
+
+# Aufgabe 6
+# =========
+
+# Daten einlesen
+url <- "http://stat.ethz.ch/Teaching/Datasets/klaerschlamm.dat"
+schlamm.all <- read.table(url, header = TRUE)
+schlamm <- schlamm.all[,-1] ## Labor-Spalte entfernen
+
+# a)
+boxplot(schlamm)
+summary(schlamm) # arithmetisches Mittel: Mean
+                 # Median: Median
+# Bei folgenden Proben ist es plausibel, dass die Konzentration unter 400 mg/kg 
+# liegt: 
+# Pr1
+# Pr4
+# Pr5
+# Pr6
+# Pr9
