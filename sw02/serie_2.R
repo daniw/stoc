@@ -19,7 +19,7 @@ sd(flaech)
 # Aufgabe 2
 # =========
 # Daten
-x <- c(2,2,6,7,7,8,8,9)
+x <- c( 2, 2, 6, 7, 7, 8, 8, 9)
 y <- c(11,14,14,16,27,27,27,38)
 
 # a)
@@ -29,6 +29,9 @@ sum(y)
 sum(y^2)
 sum(x*y)
 
+# b)
+(sum((x - mean(x))^2))/(length(x) - 1)
+(sum(x^2) - length(x)*mean(x)^2)/(length(x) - 1)
 
 # Aufgabe 5
 # =========
