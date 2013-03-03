@@ -1,7 +1,8 @@
 # Aufgabe 1
 # =========
 # Daten
-flaech <- c(2.1,2.4,2.8,3.1,4.2,4.9,5.1,6.0,6.4,7.3,10.8,12.5,13.0,13.7,14.8,17.6,19.6,23.0,25.0,35.2,39.6)
+flaech <- c(2.1,2.4,2.8,3.1,4.2,4.9,5.1,6.0,6.4,7.3,10.8,12.5,13.0,13.7,
+            14.8,17.6,19.6,23.0,25.0,35.2,39.6)
 
 # a)
 sum(flaech)
@@ -39,8 +40,9 @@ par(mfrow = c(2,2)) ## 4 Grafiken im Grafikfenster
 hist(geysir[,"Zeitspanne"])
 hist(geysir[,"Zeitspanne"], breaks = 20)
 hist(geysir[,"Zeitspanne"], breaks = seq(41, 96, by = 11))
-# Es gibt zwei Anhäufungen von Zeitapannen. 
-# Speziell fällt auf, dass beim letzten Diagramm eine der beidem Anhäufungen 
+par(mfrow=c(1,1))
+# Es gibt zwei Anhäufungen von Zeitspannen. 
+# Speziell fällt auf, dass beim letzten Diagramm eine der beiden Anhäufungen 
 # verschwindet. Daher ist die letze Darstellung nicht brauchbar. 
 
 # b)
@@ -74,3 +76,41 @@ summary(schlamm) # arithmetisches Mittel: Mean
 # Pr5
 # Pr6
 # Pr9
+
+#b)
+## Fuer jede Spalte Median berechnen
+med <- apply(schlamm, 2, median)
+## Median von jeder *Spalte* abziehen
+schlamm.centered <- scale(schlamm, scale = FALSE, center = med)
+## Boxplot zeichnen. Dazu zuerst data-frame transponieren
+boxplot(data.frame(t(schlamm.centered)))
+
+# Um systematische Fehler zu finden wird der Median der einzelnen Labors mit 
+# dem Median aller Labors verglichen. 
+apply(schlamm.centered, 1, median)
+# Um systematische Fehler einfacher erkennen zu können, werden obige Daten 
+# geplottet. 
+plot(apply(schlamm.centered, 1, median))
+# Der Idealfall wird mit einer Linie eingezeichnet. 
+abline(a=0,b=0)
+# Vor Labor 15 hat einen grossen systematischen Fehler. 
+# Die Labore 3, 4, 5 und 11 weisen keinen systematischen Fehler auf. 
+
+# Um Zufallsfehler erkennen zu können wird die Standardabweichung der 
+# einzelnen Labore betrachtet. 
+apply(schlamm.centered, 1, sd)
+# Auch die Standardabweichung wir geplottet. 
+plot(apply(schlamm.centered, 1, sd))
+abline(a=0,b=0)
+# Grosse Zufallsfehler sind bei den Laboren 21 und 15 vorhanden. 
+
+# Qualität der Analysen
+par(mfrow=c(2,1))
+plot(apply(schlamm.centered, 1, median),ylab="median")
+abline(a=0,b=0)
+plot(apply(schlamm.centered, 1, sd),ylab="sd")
+abline(a=0,b=0)
+par(mfrow=c(1,1))
+# Die Qualität der Analysen ist bei den Laboren 4 und 5 besonders gut. 
+# Bei diesen Laboren trat kein systematischer Fehler auf und der Zufallsfehler 
+# war klein. 
