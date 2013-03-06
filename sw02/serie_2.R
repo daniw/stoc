@@ -33,6 +33,30 @@ sum(x*y)
 (sum((x - mean(x))^2))/(length(x) - 1)
 (sum(x^2) - length(x)*mean(x)^2)/(length(x) - 1)
 
+# c)
+
+
+# Aufgabe 3
+# =========
+
+
+# Aufgabe 4
+# =========
+
+# Daten
+versum <- c(4,10,20, 30,40,80,120)
+veranz <- c(0,20,160,80,40,88,12)
+#sum(c(veranz))
+veranzsum <- c(0,20,180,260,300,388,400)
+
+# a)
+#hist(veranz,breaks=versum)
+plot(versum,veranz,type="s")
+plot(versum,veranzsum,type="s")
+
+# b)
+
+
 # Aufgabe 5
 # =========
 
