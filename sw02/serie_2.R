@@ -47,7 +47,8 @@ sum(x*y)
 versum <- c(4,10,20, 30,40,80,120)
 veranz <- c(0,20,160,80,40,88,12)
 #sum(c(veranz))
-veranzsum <- c(0,20,180,260,300,388,400)
+veranzsum <- c(0,20,180,260,300,388,400) # kann vielleicht auch automatisch
+                                         # berechnet werden. 
 
 # a)
 #hist(veranz,breaks=versum)
@@ -55,7 +56,10 @@ plot(versum,veranz,type="s")
 plot(versum,veranzsum,type="s")
 
 # b)
-
+# Es können zwischen 20 und 180 Personen mit höchstens 18'000.- versichert 
+# sein. 
+# Die 20% Personen (80), die am höchsten versichert sind sind mit mindestens 
+# 40'000.- versichert. 
 
 # Aufgabe 5
 # =========
