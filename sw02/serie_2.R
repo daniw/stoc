@@ -65,6 +65,9 @@ plot(versum,veranzsum,type="s")
 # Die 20% Personen (80), die am höchsten versichert sind sind mit mindestens 
 # 40'000.- versichert. 
 
+#d)
+# n-1
+
 # Aufgabe 5
 # =========
 
