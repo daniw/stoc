@@ -32,6 +32,10 @@ sum(x*y)
 # b)
 (sum((x - mean(x))^2))/(length(x) - 1)
 (sum(x^2) - length(x)*mean(x)^2)/(length(x) - 1)
+# sxx berechnet: 
+cor(x,x)*sd(x)^2
+# vereinfacht: 
+sd(x)^2
 
 # c)
 
