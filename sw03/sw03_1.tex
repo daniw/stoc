@@ -2,5 +2,24 @@
 
 \section{Aufgabe 1}
 \subsection{a}
+\[ S_{xy} 
+= \frac{\sum_{i=1}^{n}(x_i - \overline{x})(y_i - \overline{y})}{n - 1} \]
+\[ = \frac{\sum_{i=1}^{n}(x_i \cdot y_i - x_i \cdot \overline{y} - 
+\overline{x} \cdot y_i + \overline{x} \cdot \overline{y})}{n - 1} \]
+\[ = \frac{\sum_{i=1}^{n}(x_i \cdot y_i)
+ - \sum_{i=1}^{n}(x_i \cdot \overline{y})
+ - \sum_{i=1}^{n}(\overline{x} \cdot y_i) 
+ + \sum_{i=1}^{n}(\overline{x} \cdot \overline{y})}{n-1} \]
+\[ = \frac{\sum_{i=1}^{n}(x_i \cdot y_i)
+ - \overline{y} \cdot \sum_{i=1}^{n}(x_i)
+ - \overline{x} \cdot \sum_{i=1}^{n}(y_i) 
+ + n \cdot \overline{x} \cdot \overline{y}}{n-1} \]
+\[ = \frac{\sum_{i=1}^{n}(x_i \cdot y_i)
+ - \overline{y} \cdot n \cdot \overline{x}
+ - \overline{x} \cdot n \cdot \overline{y} 
+ + n \cdot \overline{x} \cdot \overline{y}}{n-1} \]
+\[ = \frac{\sum_{i=1}^{n}(x_i \cdot y_i)
+ - n \cdot \overline{x} \cdot \overline{y}}{n-1} \]
 
 \subsection{b}
+\[ r = \frac{S_{xy}}{S_x \cdot S_y} \]
