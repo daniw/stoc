@@ -64,6 +64,8 @@ plot(versum,veranzsum,type="s")
 # sein. 
 # Die 20% Personen (80), die am höchsten versichert sind sind mit mindestens 
 # 40'000.- versichert. 
+median(veranz)
+mean(veranz)
 
 #d)
 # n-1
