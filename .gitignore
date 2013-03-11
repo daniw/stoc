@@ -1,1 +1,5 @@
 .Rhistory
+*.aux
+*.log
+*.out
+*.toc
