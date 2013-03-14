@@ -7,3 +7,7 @@ Simon Kurmann (20)
 sw02:
 Elia Fankhauser (8)
 Reto Ritter (28)
+
+SW03:
+Luca Zangger (41)
+Francesco Casamassima (4)
