@@ -2,3 +2,25 @@
 
 \section{Aufgabe 2}
 \subsection{a}
+$n = 10$ Stichproben, $\pi = 0.02$\\
+\[ X_i = \left\lbrace \begin{array}{l}
+1, \text{ i-te Probe verunreinigt}\\
+0, \text{ i-te Probe sauber}\end{array} \right. \]
+\[ X = \sum_{i=1}^{n} X_i \]
+\[ P(X=0) = \left(\begin{matrix}n\\x\end{matrix}\right) \cdot 
+\pi^x \cdot (1 - \pi)^{n-x} 
+= \left(\begin{matrix}10\\0\end{matrix}\right) \cdot 0.02^0 \cdot 
+(1 - 0.02)^{10-0} = 0.817 \]
+\[ P(X=0) = 0.98^{10} = 0.817 \]
+
+\subsection{b}
+\[ y = 1 \]
+\[ y = 11 \]
+\[ P(y=1) = 0.817 \]
+\[ P(y=11) = 1 - 0.817 = 0.183 \]
+
+\subsection{c}
+\[ E\lbrack Y \rbrack = 1 \cdot P(y=1) + 11 \cdot P(y=11) 
+= 1 \cdot 0.817 + 11 \cdot 0.183 = 2.83 \]
+Einsparung: 
+\[ 10 - E\lbrack Y \rbrack = 10 - 2.83 = 7.17 \]
