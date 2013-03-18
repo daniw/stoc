@@ -64,20 +64,30 @@ Das ist in R sicher auch automatisch ohne For-Schleife möglich.
 \subsection{e}
 \begin{Schunk}
 \begin{Sinput}
-> 
+> plot(0:1000,dpois(200,0:1000),type='l')
+> dpois(200,200)
 \end{Sinput}
+\begin{Soutput}
+[1] 0.02819773
+\end{Soutput}
 \end{Schunk}
 
 \subsection{f}
 \begin{Schunk}
 \begin{Sinput}
-> 
+> sum(dpois(200,0:200))
 \end{Sinput}
+\begin{Soutput}
+[1] 0.4953046
+\end{Soutput}
 \end{Schunk}
 
 \subsection{g}
 \begin{Schunk}
 \begin{Sinput}
-> 
+> sum(dpois(200,190:210))
 \end{Sinput}
+\begin{Soutput}
+[1] 0.5420267
+\end{Soutput}
 \end{Schunk}

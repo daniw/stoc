@@ -28,15 +28,16 @@ Das ist in R sicher auch automatisch ohne For-Schleife möglich.
 
 \subsection{e}
 <<>>=
-
+plot(0:1000,dpois(200,0:1000),type='l')
+dpois(200,200)
 @
 
 \subsection{f}
 <<>>=
-
+sum(dpois(200,0:200))
 @
 
 \subsection{g}
 <<>>=
-
+sum(dpois(200,190:210))
 @
