@@ -2,41 +2,82 @@
 
 \section{Aufgabe 5}
 \subsection{a}
-<<>>=
-dbinom(10,size=50,prob=0.2)
-@
+\begin{Schunk}
+\begin{Sinput}
+> dbinom(10,size=50,prob=0.2)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.139819
+\end{Soutput}
+\end{Schunk}
 
 \subsection{b}
-<<>>=
-sum(dbinom(0:5,size=50,prob=0.2))
-@
+\begin{Schunk}
+\begin{Sinput}
+> sum(dbinom(0:5,size=50,prob=0.2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.04802722
+\end{Soutput}
+\end{Schunk}
 
 \subsection{c}
-<<>>=
-sum(dbinom(15:50,size=50,prob=0.2))
-@
+\begin{Schunk}
+\begin{Sinput}
+> sum(dbinom(15:50,size=50,prob=0.2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.06072208
+\end{Soutput}
+\end{Schunk}
 
 \subsection{d}
-$c$ für $P(X \leq c) \approx 0.99 wird von Hand empirisch gefunden. 
-<<>>=
-sum(dbinom(0:20,size=50,prob=0.2))
-sum(dbinom(0:15,size=50,prob=0.2))
-sum(dbinom(0:16,size=50,prob=0.2))
-sum(dbinom(0:17,size=50,prob=0.2))
-@
+$c$ für $P(X \leq c) \approx 0.99$ wird von Hand empirisch gefunden. 
+\begin{Schunk}
+\begin{Sinput}
+> sum(dbinom(0:20,size=50,prob=0.2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.9996793
+\end{Soutput}
+\begin{Sinput}
+> sum(dbinom(0:15,size=50,prob=0.2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.9691966
+\end{Soutput}
+\begin{Sinput}
+> sum(dbinom(0:16,size=50,prob=0.2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.9855583
+\end{Soutput}
+\begin{Sinput}
+> sum(dbinom(0:17,size=50,prob=0.2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.9937392
+\end{Soutput}
+\end{Schunk}
 Das ist in R sicher auch automatisch ohne For-Schleife möglich. 
 
 \subsection{e}
-<<>>=
-
-@
+\begin{Schunk}
+\begin{Sinput}
+> 
+\end{Sinput}
+\end{Schunk}
 
 \subsection{f}
-<<>>=
-
-@
+\begin{Schunk}
+\begin{Sinput}
+> 
+\end{Sinput}
+\end{Schunk}
 
 \subsection{g}
-<<>>=
-
-@
+\begin{Schunk}
+\begin{Sinput}
+> 
+\end{Sinput}
+\end{Schunk}

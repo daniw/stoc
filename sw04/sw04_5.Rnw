@@ -1,0 +1,42 @@
+% coding:utf-8
+
+\section{Aufgabe 5}
+\subsection{a}
+<<>>=
+dbinom(10,size=50,prob=0.2)
+@
+
+\subsection{b}
+<<>>=
+sum(dbinom(0:5,size=50,prob=0.2))
+@
+
+\subsection{c}
+<<>>=
+sum(dbinom(15:50,size=50,prob=0.2))
+@
+
+\subsection{d}
+$c$ für $P(X \leq c) \approx 0.99$ wird von Hand empirisch gefunden. 
+<<>>=
+sum(dbinom(0:20,size=50,prob=0.2))
+sum(dbinom(0:15,size=50,prob=0.2))
+sum(dbinom(0:16,size=50,prob=0.2))
+sum(dbinom(0:17,size=50,prob=0.2))
+@
+Das ist in R sicher auch automatisch ohne For-Schleife möglich. 
+
+\subsection{e}
+<<>>=
+
+@
+
+\subsection{f}
+<<>>=
+
+@
+
+\subsection{g}
+<<>>=
+
+@
