@@ -11,38 +11,23 @@ mit $\lambda = 2$
 \subsection{a}
 \[ P_{\lambda}(0) = \frac{2^0}{0!} \cdot e^{-2} = 0.135 \]
 R:
-\begin{Schunk}
-\begin{Sinput}
-> dpois(0,2)
-\end{Sinput}
-\begin{Soutput}
-[1] 0.1353353
-\end{Soutput}
-\end{Schunk}
+<<>>=
+dpois(0,2)
+@
 
 \subsection{b}
 \[ P_{\lambda}(\leq3) = \sum_{j=0}^{3}(P_{\lambda}(j)) = 0.857 \]
 R:
-\begin{Schunk}
-\begin{Sinput}
-> sum(dpois(0:3,2))
-\end{Sinput}
-\begin{Soutput}
-[1] 0.8571235
-\end{Soutput}
-\end{Schunk}
+<<>>=
+sum(dpois(0:3,2))
+@
 
 \subsection{c}
 \[ P_{\lambda}(>3) = 1 - P_{\lambda}(\leq3) = 0.143 \]
 R:
-\begin{Schunk}
-\begin{Sinput}
-> 1-sum(dpois(0:3,2))
-\end{Sinput}
-\begin{Soutput}
-[1] 0.1428765
-\end{Soutput}
-\end{Schunk}
+<<>>=
+1-sum(dpois(0:3,2))
+@
 
 \subsection{d}
 Poissonverteilung mit Erwartungswert $\lambda 
