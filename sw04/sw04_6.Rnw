@@ -10,14 +10,9 @@
 = \frac{6!}{6! \cdot (6-6)!} \cdot \left(\frac{1}{49}\right)^6 
 \cdot \left(1 - \frac{1}{49}\right)^0 = 7.22 \cdot 10^{-11} \]
 R:
-\begin{Schunk}
-\begin{Sinput}
-> dbinom(6,size=6,prob=1/49)
-\end{Sinput}
-\begin{Soutput}
-[1] 7.224762e-11
-\end{Soutput}
-\end{Schunk}
+<<>>=
+dbinom(6,size=6,prob=1/49)
+@
 
 \subsection{b}
 \[ \left(\begin{array}{l}15\\7\end{array}\right) 
