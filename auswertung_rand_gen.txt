@@ -1,17 +1,17 @@
 ﻿Auswertung des Zufallsgenerators:
 
-sw01:
+sw01 (28.02.2013):
 Daniel Winz (39)
 Simon Kurmann (20)
 
-sw02:
+sw02 (07.03.2013):
 Elia Fankhauser (8)
 Reto Ritter (28)
 
-SW03:
+SW03 (14.03.2013):
 Luca Zangger (41)
 Francesco Casamassima (4)
 
-SW04:
+SW04 (21.03.2013):
 Daniel Kaufmann (18)
 Pascal Straub (35)
