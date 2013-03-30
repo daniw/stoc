@@ -1,0 +1,67 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw05/sw05_2.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 2}
+Allgemein: 
+\[ P_{\lambda}(k) = \frac{\lambda^k}{k!} \cdot e^{-\lambda} \]
+mit $\lambda = 2$
+
+\subsection{a}
+\[ P_{\lambda}(0) = \frac{2^0}{0!} \cdot e^{-2} = 0.135 \]
+R:
+\begin{Schunk}
+\begin{Sinput}
+> dpois(0,2)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1353353
+\end{Soutput}
+\end{Schunk}
+
+\subsection{b}
+\[ P_{\lambda}(\leq3) = \sum_{j=0}^{3}(P_{\lambda}(j)) = 0.857 \]
+R:
+\begin{Schunk}
+\begin{Sinput}
+> sum(dpois(0:3,2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.8571235
+\end{Soutput}
+\end{Schunk}
+oder
+\begin{Schunk}
+\begin{Sinput}
+> ppois(3,2)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.8571235
+\end{Soutput}
+\end{Schunk}
+
+\subsection{c}
+\[ P_{\lambda}(>3) = 1 - P_{\lambda}(\leq3) = 0.143 \]
+R:
+\begin{Schunk}
+\begin{Sinput}
+> 1-sum(dpois(0:3,2))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1428765
+\end{Soutput}
+\end{Schunk}
+oder
+\begin{Schunk}
+\begin{Sinput}
+> 1-ppois(3,2)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1428765
+\end{Soutput}
+\end{Schunk}
+
+\subsection{d}
+Poissonverteilung mit Erwartungswert $\lambda 
+= 12 \quad Y \sim \text{Poisson}(\lambda)$
