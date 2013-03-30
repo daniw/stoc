@@ -1,0 +1,63 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw05/sw05_1.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 1}
+Allgemein: 
+\[ P_{\lambda}(k) = \frac{\lambda^k}{k!} \cdot e^{-\lambda} \]
+mit $\lambda = 200$
+
+\subsection{a}
+\[ P_{\lambda}(200) = \frac{200^200}{200!} \cdot e^{-200} = 0.28198 \]
+R:
+\begin{Schunk}
+\begin{Sinput}
+> dpois(200,200)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.02819773
+\end{Soutput}
+\end{Schunk}
+
+\subsection{b}
+\[ P_{\lambda}(\leq3) = \sum_{j=0}^{210}(P_{\lambda}(j)) = 0.77271 \]
+R:
+\begin{Schunk}
+\begin{Sinput}
+> sum(dpois(0:210,200))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.772708
+\end{Soutput}
+\end{Schunk}
+oder
+\begin{Schunk}
+\begin{Sinput}
+> ppois(210,200)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.772708
+\end{Soutput}
+\end{Schunk}
+
+\subsection{c}
+\[ P_{\lambda}(\leq3) = \sum_{j=190}^{210}(P_{\lambda}(j)) = 0.77271 \]
+R:
+\begin{Schunk}
+\begin{Sinput}
+> sum(dpois(190:210,200))
+\end{Sinput}
+\begin{Soutput}
+[1] 0.5422097
+\end{Soutput}
+\end{Schunk}
+oder
+\begin{Schunk}
+\begin{Sinput}
+> ppois(210,200)-ppois(189,200)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.5422097
+\end{Soutput}
+\end{Schunk}
