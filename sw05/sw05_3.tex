@@ -39,4 +39,69 @@
 \end{array} \]
 
 \subsection{c}
-\[  \]
+\[ \frac{d}{d\pi}\left(\log(P(X_1=x_1 \cap X_2 = x_2))\right) \]
+\[ \begin{array}{l} 
+= \frac{d}{d\pi}\left( 
+\log(n_1!) 
+- \log(x_1!) 
+- \log((n_1 - x_1)!) 
++ x_1 \cdot \log(\pi) 
++ (n_1 - x_1) \cdot \log(1-\pi) \right.\\\left.
++ \log(n_2!) 
+- \log(x_2!) 
+- \log((n_2 - x_2)!) 
++ x_2 \cdot \log(\pi) 
++ (n_2 - x_2) \cdot \log(1-\pi) \right)
+\end{array} \]
+%
+\[ = \frac{x_1}{\ln(10) \cdot \pi} + \frac{n_1 - x_1}{\ln(10) \cdot (1 - \pi)}
++ \frac{x_2}{\ln(10) \cdot \pi} + \frac{n_2 - x_2}{\ln(10) \cdot (1 - \pi)} \]
+\[ = log(e) \cdot \left( 
+\frac{x_1}{\pi} 
++ \frac{n_1 - x_1}{1 - \pi}
++ \frac{x_2}{\pi} 
++ \frac{n_2 - x_2}{1 - \pi} \right) \]
+\[ = log(e) \cdot \left( 
+\frac{x_1 + x_2}{\pi} 
++ \frac{n_1 - x_1 + n_2 - x_2}{1 - \pi} \right) \stackrel{!}{=} 0 \]
+\[ \frac{x_1 + x_2}{\pi} + \frac{n_1 - x_1 + n_2 - x_2}{1 - \pi} = 0 \]
+\[ \frac{1 - \pi}{\pi} = - \frac{n_1 - x_1 + n_2 - x_2}{x_1 + x_2} \]
+\[ \frac{1}{\pi} -1 = - \frac{n_1 - x_1 + n_2 - x_2}{x_1 + x_2} \]
+\[ \frac{1}{\pi} = - \frac{n_1 - x_1 + n_2 - x_2}{x_1 + x_2} + 1 \]
+\[ \pi = -\frac{1}{\frac{n_1 - x_1 + n_2 - x_2}{x_1 + x_2} + 1} \]
+\[ \pi = -\frac{1}{\frac{30 - 2 + 50 - 4}{2 + 4} + 1} = \frac{3}{40} = 0.075 \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
