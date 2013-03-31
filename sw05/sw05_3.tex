@@ -1,0 +1,42 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw05/sw05_3.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 3}
+\subsection{a}
+\[ P(X_1=x_1 \cap X_2 = x_2) = P(X_1=x_1) \cdot P(X_2=x_2) \]
+\[ P(X_m=x_m) = \frac{n_m!}{x_m! \cdot (n_m - x_m)!} 
+\cdot \pi^{x_m} \cdot (1-\pi)^{n_m - x_m} \]
+\[ P(X_1=x_1) \cdot P(X_2=x_2) 
+= \frac{n_1!}{x_1! \cdot (n_1 - x_1)!} 
+\cdot \pi^{x_1} \cdot (1-\pi)^{n_1 - x_1} 
+\cdot \frac{n_2!}{x_2! \cdot (n_2 - x_2)!} 
+\cdot \pi^{x_2} \cdot (1-\pi)^{n_2 - x_2} \]
+
+\subsection{b}
+\[ \log(P(X_1=x_1 \cap X_2 = x_2)) = \log(P(X_1=x_1) \cdot P(X_2=x_2)) \]
+\[ \begin{array}{l} 
+= \log\left(\frac{n_1!}{x_1! \cdot (n_1 - x_1)!}\right) 
++ \log(\pi^{x_1}) 
++ \log((1-\pi)^{n_1 - x_1})\\ 
++ \log\left(\frac{n_2!}{x_2! \cdot (n_2 - x_2)!}\right) 
++ \log(\pi^{x_2}) 
++ \log((1-\pi)^{n_2 - x_2}) 
+\end{array} \]
+% 
+\[ \begin{array}{l} 
+= \log(n_1!) 
+- \log(x_1!) 
+- \log((n_1 - x_1)!) 
++ x_1 \cdot \log(\pi) 
++ (n_1 - x_1) \cdot \log(1-\pi) \\
++ \log(n_2!) 
+- \log(x_2!) 
+- \log((n_2 - x_2)!) 
++ x_2 \cdot \log(\pi) 
++ (n_2 - x_2) \cdot \log(1-\pi) 
+\end{array} \]
+
+\subsection{c}
+\[  \]
