@@ -1,0 +1,49 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw05/sw05_4.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 4}
+\subsection{a}
+genau 2 Patienten: 
+<<>>=
+dbinom(2,size=10,prob=0.3)
+@
+mindestens 2 Patienten: 
+<<>>=
+pbinom(2,size=10,prob=0.3)
+@
+
+\subsection{b}
+\begin{enumerate}
+  \item Modell: \\
+        \[ X \sim \text{Bin}(n=10,\pi) \]
+  \item Nullhypothese: 
+        \[ \begin{array}{ll}
+          H_0 &: \pi_0 = 0.3 \\
+          H_A &: \pi > \pi_0
+        \end{array} \]
+  \item Teststatistik: 
+        \[ X: P(X=x | H_0) 
+        = \left( \begin{array}{l}10\\x\end{array} \right) 
+        \cdot 0.3^x \cdot 0.7^{10 - x} \]
+  \item $\alpha = 0.05$
+  \item $P(X=x)$ in Abhängigkeit von x: 
+<<>>=
+dbinom(0:10,size=10,prob=0.3)
+@
+        \[ K = \lbrace 6, 7, 8, 9, 10 \rbrace \]
+  \item $x=4$\\
+        \[ \Rightarrow H_0 \text{ behalten} \]
+\end{enumerate}
+% <<>>=
+% dbinom(0:10,size=10,prob=0.3)
+% dbinom(5,size=10,prob=0.3)
+% @
+
+\subsection{c}
+
+R:
+<<>>=
+1-sum(dpois(0:3,2))
+@
