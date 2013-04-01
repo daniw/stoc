@@ -1,0 +1,45 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw05/sw05_6.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 6}
+\subsection{a}
+Macht: 
+\begin{Schunk}
+\begin{Sinput}
+> pbinom(1,size=50,prob=0.075)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1025006
+\end{Soutput}
+\end{Schunk}
+
+\subsection{b}
+Verwerfungsbereich: 
+\begin{Schunk}
+\begin{Sinput}
+> pbinom(0:50,size=150,prob=0.1)
+\end{Sinput}
+\begin{Soutput}
+ [1] 1.368915e-07 2.418416e-06 2.130437e-05 1.248274e-04 5.475463e-04 1.919034e-03
+ [7] 5.601734e-03 1.401933e-02 3.073762e-02 6.004622e-02 1.059630e-01 1.708959e-01
+[13] 2.544669e-01 3.530378e-01 4.602141e-01 5.681844e-01 6.694064e-01 7.580585e-01
+[19] 8.308407e-01 8.870234e-01 9.279120e-01 9.560364e-01 9.743599e-01 9.856903e-01
+[25] 9.923522e-01 9.960829e-01 9.980758e-01 9.990927e-01 9.995891e-01 9.998211e-01
+[31] 9.999251e-01 9.999698e-01 9.999883e-01 9.999956e-01 9.999984e-01 9.999994e-01
+[37] 9.999998e-01 9.999999e-01 1.000000e+00 1.000000e+00 1.000000e+00 1.000000e+00
+[43] 1.000000e+00 1.000000e+00 1.000000e+00 1.000000e+00 1.000000e+00 1.000000e+00
+[49] 1.000000e+00 1.000000e+00 1.000000e+00
+\end{Soutput}
+\end{Schunk}
+\[ K = \lbrace 0, 1, 2, 3, 4, 5, 6, 7, 8 \rbrace \]
+Macht: 
+\begin{Schunk}
+\begin{Sinput}
+> pbinom(8,size=150,prob=0.075)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.2000952
+\end{Soutput}
+\end{Schunk}

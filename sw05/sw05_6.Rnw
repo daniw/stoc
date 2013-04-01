@@ -1,0 +1,22 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw05/sw05_6.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 6}
+\subsection{a}
+Macht: 
+<<>>=
+pbinom(1,size=50,prob=0.075)
+@
+
+\subsection{b}
+Verwerfungsbereich: 
+<<>>=
+pbinom(0:50,size=150,prob=0.1)
+@
+\[ K = \lbrace 0, 1, 2, 3, 4, 5, 6, 7, 8 \rbrace \]
+Macht: 
+<<>>=
+pbinom(8,size=150,prob=0.075)
+@
