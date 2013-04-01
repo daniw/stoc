@@ -36,14 +36,6 @@ dbinom(0:10,size=10,prob=0.3)
   \item $x=4$\\
         \[ \Rightarrow H_0 \text{ behalten} \]
 \end{enumerate}
-% <<>>=
-% dbinom(0:10,size=10,prob=0.3)
-% dbinom(5,size=10,prob=0.3)
-% @
 
 \subsection{c}
 
-R:
-<<>>=
-1-sum(dpois(0:3,2))
-@
