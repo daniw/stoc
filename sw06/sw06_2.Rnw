@@ -6,10 +6,17 @@
 \section{Aufgabe 2}
 
 \subsection{a}
+<<>>=
+dbinom(3,size=4,prob=0.9)
+@
 
 \subsection{b}
 
+
 \subsection{c}
+<<>>=
+sum(dbinom(27:28,size=28,prob=0.9))
+@
 
 \subsection{d}
 
