@@ -6,10 +6,41 @@
 \section{Aufgabe 1}
 
 \subsection{a}
-
+\begin{enumerate}
+  \item Modell \\
+        $X =$ \#Patienten, die auf die Behandlung ansprechen\\
+        $X \sim Bin(n,\pi)$\\
+        $X \sim Bin(16,\pi)$
+  \item Nullhypothese \\
+        $H_0: \pi_0 = 0.15$\\
+        $H_A: \pi > \pi_0 = 0.15$
+  \item Teststatistik \\
+        $T =$ \#Patienten, die auf die Behandlung ansprechen \\
+        $T \sim Bin(16,\pi_0 = 0.15)$
+  \item Signifikanzniveau \\
+        $\alpha = 0.05$
+  \item Verwerfungsbereich \\
+        $K = (c,n), \quad P_{H_0}(T \in (c,n)) \stackrel{\sim}{\leq} \alpha$\\
+        $P_{H_0}(T \geq c) = 1 - P(T \leq \underbrace{c - 1}_{= 5})$\\
+        $\Rightarrow c - 1 = 5 \quad c = 6$\\
+        $K = [6, 16]$
+  \item Testentscheid\\
+        $t = 5$
+\end{enumerate}
 
 \subsection{b}
-
+5
 
 \subsection{c}
+$P_{\pi=0.3}(T \in K)$\\
+$ = P_{\pi=0.3}(T \geq 6) = 1 - P_{\pi=0.3}(T \leq 5) 
+= 1 - \sum_{K=0}^{5}\left(\begin{array}{l}16\\K\end{array}\right) 
+~ 0.3^K ~ 0.7^{16-K}$
+<<>>=
+1 - pbinom(5,size=16,prob=0.3)
+@
+Oder
+<<>>=
+sum(dbinom(6:16,size=16,prob=0.3))
+@
 
