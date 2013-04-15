@@ -6,3 +6,66 @@
 \section{Aufgabe 1}
 
 \subsection{a}
+Die gesamte Fläche unter der Kurve muss einen Wert von 1 haben. 
+\[ \rightarrow \frac{20 \cdot c}{2} = 1 \]
+\[ \rightarrow c = \frac{2}{20} = 0.1 \]
+
+\subsection{b}
+\[ f(x) = m \cdot x + c \]
+\[ m = \frac{0.1}{20} = 0.005 \]
+\[ c = 0.1 \]
+\begin{enumerate}
+  \item $X < 5$
+  \[ P(X<5) = \int_0^{5}(-0.005 \cdot x + 0.1)dx 
+  = -0.0025 \cdot x^2 + 0.1 \cdot x |_0^{5} 
+  = -0.0025 \cdot 5^2 + 0.1 \cdot 5 = 0.4375 \]
+  \item $X < 10$
+  \[ P(X<10) = \int_0^{10}(-0.005 \cdot x + 0.1)dx 
+  = -0.0025 \cdot x^2 + 0.1 \cdot x |_0^{10} 
+  = -0.0025 \cdot 10^2 + 0.1 \cdot 10 = 0.75 \]
+\end{enumerate}
+
+\subsection{c}
+\begin{center}
+\begin{tikzpicture}[domain=0:20,scale=0.5]
+  % Raster
+%   \draw[very thin,color=gray] (-0.2,-0.2) grid (9.9,1.1);
+  % x-Achse
+  \draw[->] (-0.2,0) -- (10.2,0) node[right] {$x$};
+  % y-Achse
+  \draw[->] (0,-0.2) -- (0,10.2) node[above] {$f(x)$};
+  % Linien, Pfeile
+%   \draw[-latex] (0,0) -- (3,2) node[right] {$a+bj$};
+%   \draw[-latex] (3,0) -- (3,2);
+%   \draw[-latex] (0,2) -- (3,2);
+  % unabhängige Beschriftungen
+%   \node at (1.5,2.2) {a};
+%   \node at (3.2,1) {b};
+  % Funktionen
+  \draw[color=red] plot (0.5*\x,-0.025*\x*\x+\x);
+\end{tikzpicture}
+\end{center}
+
+\subsection{d}
+Erwartungswert
+\[ E(X) = \int_{-\infty}^{\infty} x \cdot f(x) dx 
+= \int_{-\infty}^{\infty} x \cdot (-0.005 \cdot x + 0.1) dx 
+= \int_{0}^{20}(-0.005 \cdot x^2 + 0.1 \cdot x) dx \]
+\[ = \left.\left(\frac{-0.005}{3} \cdot x^3 
++ 0.05 \cdot x^2\right)\right|_{0}^{20} 
+= \frac{-0.005}{3} \cdot 20^3 + 0.05 \cdot 20^2 
+= 6.667 \]
+Median
+\[ P(X \leq q(0.5)) \]
+\[ \int_0^{x}(-0.005 \cdot x + 0.1)dx \stackrel{!}{=} 0.5 \]
+\[ -0.0025 \cdot x^2 + 0.1 \cdot x = 0.5 \]
+\[ x = 5.858 \]
+Standardabweichung
+\[ \sigma_x = \sqrt{Var(x)} = \sqrt{E(X^2)-E(X)} 
+= \sqrt{\int_{0}^{20} x^2 \left(0.1 \cdot 
+\left(1 - \frac{x}{20}\right)\right) dx - \left(\frac{20}{3}\right)^2} 
+= \sqrt{\frac{200}{9}} = 4.71 \]
+
+\subsection{e}
+\[ P(K \leq 120'000) = P(40'000 \sqrt{x} \leq 120'000) = P(\sqrt{x} \leq 3) 
+= P(x \leq 9) = F(9) = 0.6975 \]
