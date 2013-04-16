@@ -6,3 +6,35 @@
 \section{Aufgabe 4}
 
 \subsection{a}
+<<fig=TRUE>>=
+plot(seq(0,100,by=0.001),dnorm(seq(0,100,by=0.001),mean=32,sd=6),type='l')
+abline(v=26)
+abline(v=38)
+@
+
+\subsection{b}
+<<>>=
+pnorm(40,mean=32,sd=6)
+@
+
+\subsection{c}
+<<>>=
+pnorm(27,mean=32,sd=6)
+@
+
+\subsection{d}
+% Ausprobiert: 43.75978
+<<>>=
+qnorm(0.975,mean=32,sd=6)
+@
+
+\subsection{e}
+% Ausprobiert: 24.310692
+<<>>=
+qnorm(0.1,mean=32,sd=6)
+@
+
+\subsection{f}
+<<>>=
+pnorm(38,mean=32,sd=6)-pnorm(26,mean=32,sd=6)
+@
