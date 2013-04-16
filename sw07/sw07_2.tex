@@ -4,5 +4,16 @@
 % Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw07/sw07_2.Rnw",encoding='UTF-8')
 
 \section{Aufgabe 2}
-
-\subsection{a}
+\begin{Schunk}
+\begin{Sinput}
+> anz<-100
+> x.rand <- runif(anz,min=-1,max=1)
+> y.rand <- runif(anz,min=-1,max=1)
+> rad.rand <- sqrt(x.rand^2 + y.rand^2)
+> pi <- sum(rad.rand < 1)/anz*4
+> pi
+\end{Sinput}
+\begin{Soutput}
+[1] 3.2
+\end{Soutput}
+\end{Schunk}
