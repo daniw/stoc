@@ -1,0 +1,29 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw07/sw07_5.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 4}
+
+\subsection{a}
+<<fig=TRUE>>=
+iron.all<-read.table("ironF3.dat",header=TRUE)
+iron<-iron.all[,-1]
+boxplot(iron)
+@
+
+\subsection{b}
+<<fig=TRUE>>=
+iron.log=log10(iron)
+boxplot(iron.log)
+@
+
+\subsection{c}
+<<fig=TRUE>>=
+iron.med<-iron[1]
+iron.log.med<-iron.log[1]
+plot(1:nrow(iron.med),iron.med)
+@
+<<fig=TRUE>>=
+plot(iron.log[2])
+@
