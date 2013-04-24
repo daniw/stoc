@@ -6,10 +6,26 @@
 \section{Aufgabe 4}
 
 \subsection{a}
-
+<<fig=TRUE>>=
+par(mfrow=c(1,2)) # Mehrere Grafiken neben- und untereinander
+werte <- c(0,10,11) # moegliche Werte von X
+sim <- sample(werte,1000, replace = TRUE) # X simulieren
+hist(sim, main=paste("Original")) # Histogramm erstellen
+qqnorm(sim) # Normalplot erstellen
+@
 
 \subsection{b}
-
+<<fig=TRUE>>=
+par(mfrow=c(1,2))
+n<-5
+sim<-matrix(sample(werte,n*1000,replace=TRUE),ncol=n)
+# X_1,...,X_n simulieren und in einer n-spaltigen Matrix
+# (mit 1000 Zeilen) anordnen
+sim.mean<- apply(sim,1,"mean") #In jeder Matrixzeile Mittelwert berechnen
+hist(sim.mean)
+title(paste("Mittelwerte von",n,"Beobachtungen"))
+qqnorm(sim.mean)
+@
 
 \subsection{c}
 
