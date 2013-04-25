@@ -6,7 +6,11 @@
 \section{Aufgabe 2}
 
 \subsection{a}
-
+<<>>=
+1-ppois(q=12,lambda=60/15)
+@
 
 \subsection{b}
-
+<<>>=
+ppois(q=6,lambda=60/15)
+@
