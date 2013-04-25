@@ -34,4 +34,33 @@
 \includegraphics{sw08_4-002}
 
 \subsection{c}
+\begin{Schunk}
+\begin{Sinput}
+> par(mfrow=c(1,2))
+> n<-5
+> sim<-matrix(sample(werte,n*10,replace=TRUE),ncol=n)
+> # X_1,...,X_n simulieren und in einer n-spaltigen Matrix
+> # (mit 10 Zeilen) anordnen
+> sim.mean<- apply(sim,1,"mean") #In jeder Matrixzeile Mittelwert berechnen
+> hist(sim.mean)
+> title(paste("Mittelwerte von",n,"Beobachtungen"))
+> qqnorm(sim.mean)
+\end{Sinput}
+\end{Schunk}
+\includegraphics{sw08_4-003}
+
+\begin{Schunk}
+\begin{Sinput}
+> par(mfrow=c(1,2))
+> n<-5
+> sim<-matrix(sample(werte,n*200,replace=TRUE),ncol=n)
+> # X_1,...,X_n simulieren und in einer n-spaltigen Matrix
+> # (mit 200 Zeilen) anordnen
+> sim.mean<- apply(sim,1,"mean") #In jeder Matrixzeile Mittelwert berechnen
+> hist(sim.mean)
+> title(paste("Mittelwerte von",n,"Beobachtungen"))
+> qqnorm(sim.mean)
+\end{Sinput}
+\end{Schunk}
+\includegraphics{sw08_4-004}
 
