@@ -6,10 +6,10 @@
 \section{Aufgabe 1}
 
 \subsection{a}
-\[ F_x(x) = 1 - e^{-\lamda x} = u \]
-\[ 1 - u = e^{-\lamda x} \]
-\[ \ln(1-u) = -\lamda x \]
-\[ x = -\frac{\ln(1-u)}{\lamda} = \triangleq F_x^{-1}(u) \]
+\[ F_x(x) = 1 - e^{-\lambda x} = u \]
+\[ 1 - u = e^{-\lambda x} \]
+\[ \ln(1-u) = -\lambda x \]
+\[ x = -\frac{\ln(1-u)}{\lambda} = \triangleq F_x^{-1}(u) \]
 <<fig=TRUE>>=
 anz <- 1000
 x <- -(log(1-runif(n=anz,min=0,max=1)))/(2)

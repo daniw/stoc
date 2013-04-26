@@ -30,10 +30,10 @@ qqnorm(sim.mean)
 \subsection{c}
 <<fig=TRUE>>=
 par(mfrow=c(1,2))
-n<-5
-sim<-matrix(sample(werte,n*10,replace=TRUE),ncol=n)
+n<-10
+sim<-matrix(sample(werte,n*1000,replace=TRUE),ncol=n)
 # X_1,...,X_n simulieren und in einer n-spaltigen Matrix
-# (mit 10 Zeilen) anordnen
+# (mit 1000 Zeilen) anordnen
 sim.mean<- apply(sim,1,"mean") #In jeder Matrixzeile Mittelwert berechnen
 hist(sim.mean)
 title(paste("Mittelwerte von",n,"Beobachtungen"))
@@ -42,10 +42,10 @@ qqnorm(sim.mean)
 
 <<fig=TRUE>>=
 par(mfrow=c(1,2))
-n<-5
-sim<-matrix(sample(werte,n*200,replace=TRUE),ncol=n)
+n<-200
+sim<-matrix(sample(werte,n*1000,replace=TRUE),ncol=n)
 # X_1,...,X_n simulieren und in einer n-spaltigen Matrix
-# (mit 200 Zeilen) anordnen
+# (mit 1000 Zeilen) anordnen
 sim.mean<- apply(sim,1,"mean") #In jeder Matrixzeile Mittelwert berechnen
 hist(sim.mean)
 title(paste("Mittelwerte von",n,"Beobachtungen"))
