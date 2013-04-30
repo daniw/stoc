@@ -12,4 +12,5 @@ qnorm(p=0.025,mean=-403,sd=3.127)
 @
 
 \subsection{b}
-Ja
+Die wahre Differenz könnte -400$\mu$g betragen, da dieser Wert in obigem 
+Vertrauensinterval liegt. 
