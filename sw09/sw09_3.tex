@@ -6,12 +6,45 @@
 \section{Aufgabe 3}
 
 \subsection{a}
-
+\[ E(X) = 356 \cdot 0.8 = 284.8 ~\rightarrow~ 285 \]
 
 \subsection{b}
+\[ P(X) = 0.2^4 \cdot 0.8 = 0.00128 \]
 
+\begin{Schunk}
+\begin{Sinput}
+> dbinom(x=3,size=4,prob=0.8)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.4096
+\end{Soutput}
+\end{Schunk}
 
 \subsection{c}
-
+\begin{Schunk}
+\begin{Sinput}
+> pbinom(q=261,size=356,prob=0.8)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.001394921
+\end{Soutput}
+\end{Schunk}
 
 \subsection{d}
+\begin{Schunk}
+\begin{Sinput}
+> binom.test(x=261,n=356,p=0.8,alternative="two.sided")
+\end{Sinput}
+\begin{Soutput}
+	Exact binomial test
+
+data:  261 and 356 
+number of successes = 261, number of trials = 356, p-value = 0.002254
+alternative hypothesis: true probability of success is not equal to 0.8 
+95 percent confidence interval:
+ 0.6839760 0.7783903 
+sample estimates:
+probability of success 
+             0.7331461 
+\end{Soutput}
+\end{Schunk}

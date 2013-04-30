@@ -6,12 +6,21 @@
 \section{Aufgabe 3}
 
 \subsection{a}
-
+\[ E(X) = 356 \cdot 0.8 = 284.8 ~\rightarrow~ 285 \]
 
 \subsection{b}
+\[ P(X) = 0.2^4 \cdot 0.8 = 0.00128 \]
 
+<<>>=
+dbinom(x=3,size=4,prob=0.8)
+@
 
 \subsection{c}
-
+<<>>=
+pbinom(q=261,size=356,prob=0.8)
+@
 
 \subsection{d}
+<<>>=
+binom.test(x=261,n=356,p=0.8,alternative="two.sided")
+@
