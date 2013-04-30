@@ -6,6 +6,10 @@
 \section{Aufgabe 5}
 
 \subsection{a}
-
+<<>>=
+qnorm(p=0.975,mean=-403,sd=3.127)
+qnorm(p=0.025,mean=-403,sd=3.127)
+@
 
 \subsection{b}
+Ja
