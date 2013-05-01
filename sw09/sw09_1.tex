@@ -12,7 +12,14 @@
 > sum(exp(-x^2/2))/(n*sqrt(2*pi))
 \end{Sinput}
 \begin{Soutput}
-[1] 0.3399053
+[1] 0.3390838
 \end{Soutput}
 \end{Schunk}
 
+\begin{Schunk}
+\begin{Sinput}
+> n=100000000
+> x=seq(from=0,to=1,by=1/n)
+> sum(exp(-x^2/2))/(n*sqrt(2*pi))
+\end{Sinput}
+\end{Schunk}
