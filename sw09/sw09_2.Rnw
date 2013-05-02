@@ -6,7 +6,7 @@
 \section{Aufgabe 2}
 
 \subsection{a}
-
+\[ \mu = 0.5 \]
 
 \subsection{b}
 
