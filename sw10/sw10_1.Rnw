@@ -4,30 +4,61 @@
 % Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw10/sw10_1.Rnw",encoding='UTF-8')
 
 \section{Aufgabe 1}
+<<>>=
+anzexp=c(18, 28, 56, 105, 126, 146, 164, 161, 123, 101, 74, 53, 23, 15, 9, 5)
+anzzer=2:17
+@
 
 \subsection{a}
-
+<<>>=
+sum(anzexp*anzzer)
+@
 
 \subsection{b}
-
+<<fig=TRUE>>=
+repmess=rep(anzzer,anzexp)
+hist(repmess,breaks=c(0,2:16,25),freq=TRUE)
+@
 
 \subsection{c}
-
+<<fig=TRUE>>=
+hist(repmess,breaks=c(0,2:16,25),freq=FALSE)
+@
 
 \subsection{d}
-
+<<fig=TRUE>>=
+plot(anzzer,anzexp/(sum(anzexp)),type='h')
+@
 
 \subsection{e}
-
+<<fig=TRUE>>=
+meanmess=mean(repmess)
+abline(v=meanmess,col='red')
+sdmess=sd(repmess)
+abline(v=meanmess+sdmess,col='green')
+abline(v=meanmess-sdmess,col='green')
+@
 
 \subsection{f}
-
+<<fig=TRUE>>=
+for(i in 1:length(anzexp))
+    anzexpsum[i] = sum(anzexp[1:i])
+plot(anzzer,anzexpsum/(sum(anzexp)),type='s')
+@
 
 \subsection{g}
-
+Poissonverteilung mit Lambda = Mittelwert (siehe e)
+<<fig=TRUE>>=
+plot(0:30,dpois(x=0:30,lambda=meanmess),type='h')
+abline(v=meanmess,col='red')
+abline(v=meanmess+sqrt(meanmess),col='green')
+abline(v=meanmess-sqrt(meanmess),col='green')
+@
 
 \subsection{h}
-
+<<>>=
+1e6*(1-ppois(q=19,lambda=meanmess))
+@
 
 \subsection{i}
 
