@@ -4,3 +4,39 @@
 % Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw10/sw10_1.Rnw",encoding='UTF-8')
 
 \section{Aufgabe 1}
+
+\subsection{a}
+
+
+\subsection{b}
+
+
+\subsection{c}
+
+
+\subsection{d}
+
+
+\subsection{e}
+
+
+\subsection{f}
+
+
+\subsection{g}
+
+
+\subsection{h}
+
+
+\subsection{i}
+
+
+\subsection{j}
+
+
+\subsection{k}
+
+
+\subsection{l}
+
