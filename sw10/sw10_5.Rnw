@@ -1,0 +1,6 @@
+% coding:utf-8
+
+% Ausführen in R: 
+% Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw10/sw10_5.Rnw",encoding='UTF-8')
+
+\section{Aufgabe 5}
