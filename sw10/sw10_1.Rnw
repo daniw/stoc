@@ -4,6 +4,13 @@
 % Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw10/sw10_1.Rnw",encoding='UTF-8')
 
 \section{Aufgabe 1}
+Zunächst eine Korrektur: 
+
+Rauchmelder älteren Herstelldatums enthielten radioaktives Material. 
+Bei aktuell hergestellten Brandmeldern kommen durchwegs andere 
+Detektionsverfahren zum Einsatz. Siehe auch 
+\url{http://www.emsc.ch/Publikationen/Elektronik/DerIonisationsBrandmelderSEV06-623.pdf}
+
 <<>>=
 anzexp=c(18, 28, 56, 105, 126, 146, 164, 161, 123, 101, 74, 53, 23, 15, 9, 5)
 anzzer=2:17
@@ -61,13 +68,21 @@ abline(v=meanmess-sqrt(meanmess),col='green')
 @
 
 \subsection{i}
-
+<<fig=TRUE>>=
+plot(0:30,dnorm(x=0:30,mean=meanmess,sd=sqrt(meanmess)),type='h')
+@
 
 \subsection{j}
-
+<<fig=TRUE>>=
+plot(0:300,dexp(x=seq(from=0,to=30,by=0.1),rate=1/meanmess),type='h')
+@
 
 \subsection{k}
-
+<<fig=TRUE>>=
+plot(0:300,dexp(x=seq(from=0,to=30,by=0.1),rate=1/meanmess),type='h')
+abline(v=meanmess*10,col='red')
+abline(v=2*meanmess*10,col='green')
+@
 
 \subsection{l}
 
