@@ -6,22 +6,36 @@
 \section{Aufgabe 2}
 
 \subsection{a}
-
+<<fig=TRUE>>=
+plot(0:70,dnorm(x=0:70,mean=32,sd=6),type='h')
+abline(v=26,col='green')
+abline(v=38,col='green')
+@
 
 \subsection{b}
-
+<<>>=
+pnorm(q=40,mean=32,sd=6)
+@
 
 \subsection{c}
-
+<<>>=
+pnorm(q=27,mean=32,sd=6)
+@
 
 \subsection{d}
-
+<<>>=
+qnorm(p=0.975,mean=32,sd=6)
+@
 
 \subsection{e}
-
+<<>>=
+qnorm(p=0.1,mean=32,sd=6)
+@
 
 \subsection{f}
-
+<<>>=
+pnorm(q=38,mean=32,sd=6)-pnorm(q=26,mean=32,sd=6)
+@
 
 \subsection{g}
 
