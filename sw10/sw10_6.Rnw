@@ -4,10 +4,16 @@
 % Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw10/sw10_6.Rnw",encoding='UTF-8')
 
 \section{Aufgabe 6}
+<<>>=
+d.nebel <- read.table("sw10_6.dat",header=T,sep=",")
+nebel.v=d.nebel[,2]
+nebel.dist=d.nebel[,3]
+@
 
 \subsection{a}
-
+<<fig=TRUE>>=
+plot(nebel.v,nebel.dist)
+@
 
 \subsection{b}
-
 
