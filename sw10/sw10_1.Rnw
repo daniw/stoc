@@ -39,6 +39,7 @@ plot(anzzer,anzexp/(sum(anzexp)),type='h')
 
 \subsection{e}
 <<fig=TRUE>>=
+plot(anzzer,anzexp/(sum(anzexp)),type='h')
 meanmess=mean(repmess)
 abline(v=meanmess,col='red')
 sdmess=sd(repmess)
@@ -48,8 +49,7 @@ abline(v=meanmess-sdmess,col='green')
 
 \subsection{f}
 <<fig=TRUE>>=
-for(i in 1:length(anzexp))
-    anzexpsum[i] = sum(anzexp[1:i])
+anzexpsum=cumsum(anzexp);
 plot(anzzer,anzexpsum/(sum(anzexp)),type='s')
 @
 
