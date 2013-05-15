@@ -16,4 +16,8 @@ plot(nebel.v,nebel.dist)
 @
 
 \subsection{b}
-
+<<fig=TRUE>>=
+lm(nebel.dist ~ nebel.v)
+plot(nebel.v,nebel.dist)
+abline(lm(nebel.dist ~ nebel.v))
+@
