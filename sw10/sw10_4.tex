@@ -4,9 +4,11 @@
 % Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw10/sw10_4.Rnw",encoding='UTF-8')
 
 \section{Aufgabe 4}
-<<>>=
-v=c(71,69,67,68,73,72,71,71,68,72,69,72)
-@
+\begin{Schunk}
+\begin{Sinput}
+> v=c(71,69,67,68,73,72,71,71,68,72,69,72)
+\end{Sinput}
+\end{Schunk}
 
 \subsection{a}
 \begin{enumerate}
@@ -23,17 +25,33 @@ v=c(71,69,67,68,73,72,71,71,68,72,69,72)
         $ \alpha = 0.05 $
   \item Verwerfungsbereich der Teststatistik \\
         $ K = [0, c_u] $
-<<>>=
-        cu=qbinom(p=0.05,size=length(v),prob=0.5)
-@
+\begin{Schunk}
+\begin{Sinput}
+>         cu=qbinom(p=0.05,size=length(v),prob=0.5)
+\end{Sinput}
+\end{Schunk}
   \item Testentscheid \\
-<<>>=
-        sum(v<70)
-@
+\begin{Schunk}
+\begin{Sinput}
+>         sum(v<70)
+\end{Sinput}
+\begin{Soutput}
+[1] 5
+\end{Soutput}
+\end{Schunk}
         $\rightarrow$ Nullhypothese kann nicht verworfen werden. 
 \end{enumerate}
 
 \subsection{b}
-<<>>=
-wilcox.test(v,mu=70,alternative="less")
-@
+\begin{Schunk}
+\begin{Sinput}
+> wilcox.test(v,mu=70,alternative="less")
+\end{Sinput}
+\begin{Soutput}
+	Wilcoxon signed rank test with continuity correction
+
+data:  v 
+V = 44.5, p-value = 0.6838
+alternative hypothesis: true location is less than 70 
+\end{Soutput}
+\end{Schunk}
