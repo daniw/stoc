@@ -19,9 +19,14 @@
         $ \alpha = 0.05 $
   \item Verwerfungsbereich der Teststatistik \\
         $ K = [\Phi^{-1}(1-\alpha), \infty] $
-<<>>=
-        qnorm(p=0.95)
-@
+\begin{Schunk}
+\begin{Sinput}
+>         qnorm(p=0.95)
+\end{Sinput}
+\begin{Soutput}
+[1] 1.644854
+\end{Soutput}
+\end{Schunk}
   \item Testentscheid \\
         $ Z = \dfrac{\sqrt{16} \cdot (204.2 - 200)}{10} = 1.68 $ \\
         $Z$ liegt im Verwerfungsbereich $\rightarrow$ $H_0$ kann verworfen 
@@ -29,14 +34,24 @@
 \end{enumerate}
 
 \subsection{b}
-<<>>=
-1-pnorm(q=205,mean=205,sd=10)
-@
+\begin{Schunk}
+\begin{Sinput}
+> 1-pnorm(q=205,mean=205,sd=10)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.5
+\end{Soutput}
+\end{Schunk}
 
 \subsection{c}
-<<>>=
-pnorm(q=205,mean=200,sd=10)
-@
+\begin{Schunk}
+\begin{Sinput}
+> pnorm(q=205,mean=200,sd=10)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.6914625
+\end{Soutput}
+\end{Schunk}
 
 \subsection{d}
 \begin{enumerate}
@@ -53,9 +68,14 @@ pnorm(q=205,mean=200,sd=10)
         $ \alpha = 0.05 $
   \item Verwerfungsbereich der Teststatistik \\
         $ K = [t_{n-1;1-\alpha}, \infty] $
-<<>>=
-        qt(p=0.95,df=16-1)
-@
+\begin{Schunk}
+\begin{Sinput}
+>         qt(p=0.95,df=16-1)
+\end{Sinput}
+\begin{Soutput}
+[1] 1.75305
+\end{Soutput}
+\end{Schunk}
   \item Testentscheid \\
         $ T = \dfrac{\sqrt{16} \cdot (204.2 - 200)}{10} = 1.68 $ \\
         $T$ liegt im Verwerfungsbereich $\rightarrow$ $H_0$ kann verworfen 
