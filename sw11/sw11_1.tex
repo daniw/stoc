@@ -4,11 +4,13 @@
 % Sweave("C:/Daten/Daniel/studium/git_repo/sem2/stoc/sw10/sw10_1.Rnw",encoding='UTF-8')
 
 \section{Aufgabe 1}
-<<>>=
-messga=c(120,265,157,187,219,288,156,205,163);
-messgb=c(127,281,160,185,220,298,167,203,171);
-messgdiff=messga-messgb;
-@
+\begin{Schunk}
+\begin{Sinput}
+> messga=c(120,265,157,187,219,288,156,205,163);
+> messgb=c(127,281,160,185,220,298,167,203,171);
+> messgdiff=messga-messgb;
+\end{Sinput}
+\end{Schunk}
 
 \subsection{a}
 gepaarte Stichproben
@@ -28,9 +30,14 @@ gepaarte Stichproben
         $ \alpha = 0.05 $
   \item Verwerfungsbereich der Teststatistik \\
         $ K = [t_{n-1;1-\alpha}, \infty] $
-<<>>=
-        qt(p=0.95,df=length(messgdiff))
-@
+\begin{Schunk}
+\begin{Sinput}
+>         qt(p=0.95,df=length(messgdiff))
+\end{Sinput}
+\begin{Soutput}
+[1] 1.833113
+\end{Soutput}
+\end{Schunk}
   \item Testentscheid \\
         $ T = \dfrac{\sqrt{16} \cdot (204.2 - 200)}{10} = 1.68 $ \\
         $T$ liegt im Verwerfungsbereich $\rightarrow$ $H_0$ kann verworfen 
