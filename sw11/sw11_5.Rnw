@@ -6,5 +6,27 @@
 \section{Aufgabe 5}
 
 \subsection{a}
+<<fig=TRUE>>=
+plot(anscombe[,'x1'],anscombe[,'y1'])
+abline(lm(anscombe[,'y1']~anscombe[,'x1']),col='green')
+@
+<<fig=TRUE>>=
+plot(anscombe[,'x2'],anscombe[,'y2'])
+abline(lm(anscombe[,'y2']~anscombe[,'x2']),col='green')
+@
+<<fig=TRUE>>=
+plot(anscombe[,'x3'],anscombe[,'y3'])
+abline(lm(anscombe[,'y3']~anscombe[,'x3']),col='green')
+@
+<<fig=TRUE>>=
+plot(anscombe[,'x4'],anscombe[,'y4'])
+abline(lm(anscombe[,'y4']~anscombe[,'x4']),col='green')
+@
 
 \subsection{b}
+<<>>=
+summary(lm(anscombe[,'y1']~anscombe[,'x1']))
+summary(lm(anscombe[,'y2']~anscombe[,'x2']))
+summary(lm(anscombe[,'y3']~anscombe[,'x3']))
+summary(lm(anscombe[,'y4']~anscombe[,'x4']))
+@
