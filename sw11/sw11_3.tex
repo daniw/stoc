@@ -6,7 +6,37 @@
 \section{Aufgabe 3}
 
 \subsection{a}
+Es handelt sich um einen gepaarten Test, weil jeder Athlet mit beiden Schuhen 
+getestet wird. 
 
 \subsection{b}
+\begin{enumerate}
+  \item Modell \\
+    $ D \sim \mathcal{N}(\mu,\hat{\sigma}_{x-y})$
+  \item Nullhypothese \\
+    $H_0: \mu=\mu_0=0$\\
+    Alternativhypothese: \\
+    $H_A: \mu<\mu_0$
+  \item Teststatistik \\
+    $T = \frac{\sqrt{n}\cdot(\bar{x}-\bar{y}-\mu_0)}{\hat{\sigma}_{x-y}}$ \\
+    $T = \frac{\sqrt{10}\cdot(-0.22-0)}{0.26} = -2.676$ \\
+    Verteilung der Teststatistik unter $H_0$\\
+    $T \sim t_{n-1}$
+  \item Signifikanzniveau \\
+    $\alpha=0.05$
+  \item Verwerfungsbereich \\
+    $K = (-\infty,-t_{n-1,1-\alpha}]$
+\begin{Schunk}
+\begin{Sinput}
+> qt(p=0.05,df=10)
+\end{Sinput}
+\begin{Soutput}
+[1] -1.812461
+\end{Soutput}
+\end{Schunk}
+    $K = (-\infty,-1.812461]$
+  \item Testentscheid \\
+    $T$ liegt im Verwerfungsbereich. 
+\end{enumerate}
 
 \subsection{c}
