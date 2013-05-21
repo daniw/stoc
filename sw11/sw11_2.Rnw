@@ -31,5 +31,7 @@ qqline(jackals[,"M"],col='green')
 qqnorm(jackals[,"W"])
 qqline(jackals[,"W"],col='green')
 @ \\
-Aufgrund der qqplots kann von einer Normalverteilung ausgegengen werden. 
-Daher ist der t-Test präziser. 
+Aufgrund der qqplots kann von einer Normalverteilung ausgegangen werden. 
+Daher ist der t-Test präziser. \\
+Der Wilcoxon-Test wäre besser geeignet, wenn die Daten nicht normal verteilt 
+wären. 
