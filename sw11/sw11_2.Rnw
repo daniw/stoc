@@ -6,11 +6,30 @@
 \section{Aufgabe 2}
 
 \subsection{a}
+Es handelt sich um ungepaarte Stichproben. 
 
 \subsection{b}
 
 \subsection{c}
+<<>>=
+# jackals=read.table("http://stat.ethz.ch/Teaching/Datasets/jackals.dat", header=TRUE)
+jackals=read.table("jackals.dat", header=TRUE)
+t.test(jackals[,'M'], jackals[,'W'], var.equal = TRUE)
+@
 
 \subsection{d}
+<<>>=
+wilcox.test(jackals[,'M'], jackals[,'W'], var.equal = TRUE)
+@
 
 \subsection{e}
+<<fig=TRUE>>=
+qqnorm(jackals[,"M"])
+qqline(jackals[,"M"],col='green')
+@
+<<fig=TRUE>>=
+qqnorm(jackals[,"W"])
+qqline(jackals[,"W"],col='green')
+@ \\
+Aufgrund der qqplots kann von einer Normalverteilung ausgegengen werden. 
+Daher ist der t-Test präziser. 
