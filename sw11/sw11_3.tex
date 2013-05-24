@@ -12,7 +12,7 @@ getestet wird.
 \subsection{b}
 \begin{enumerate}
   \item Modell \\
-    $ D \sim \mathcal{N}(\mu,\hat{\sigma}_{x-y})$
+    $ D \sim \mathcal{N}(\mu,{\hat{\sigma}_{x-y}}^2)$
   \item Nullhypothese \\
     $H_0: \mu=\mu_0=0$\\
     Alternativhypothese: \\
@@ -28,10 +28,10 @@ getestet wird.
     $K = (-\infty,-t_{n-1,1-\alpha}]$
 \begin{Schunk}
 \begin{Sinput}
-> qt(p=0.05,df=10)
+> qt(p=0.05,df=10-1)
 \end{Sinput}
 \begin{Soutput}
-[1] -1.812461
+[1] -1.833113
 \end{Soutput}
 \end{Schunk}
     $K = (-\infty,-1.812461]$
@@ -40,3 +40,11 @@ getestet wird.
 \end{enumerate}
 
 \subsection{c}
+95 \% Vertrauensintervall beinhaltet alle Werte $\mu_x - \mu_y$ \\
+$K=(-\infty, -t_{9,0.95}]$\\
+$-t_{9,0.95} \leq 
+\dfrac{\sqrt{n} (\bar{x}_n-\bar{x}_n-(\mu_x-\mu_y))}{\hat{\sigma}_{x-y}}$ \\
+$\Leftrightarrow 
+\mu_x-\mu_y \leq \bar{x}_n-\bar{y}_n+
+\dfrac{\hat{\sigma}_{x-y}\cdott_{9,0.95}}{\sqrt{n}}$ \\
+$\Rightarrow (-\infty,-0.069]$
