@@ -1,3 +1,25 @@
 % coding:utf-8
 
 \section{Aufgabe 2}
+<<>>=
+dist=c(100,200,400,800,1000,1500,2000,3000,5000,10000,20000,25000,30000)
+time=c(9.9,19.8,43.8,103.7,136,213.1,296.2,457.6,793.0,1650.8,3464.4,4495.6,5490.4)
+# summary(lm(time ~ dist))
+@
+
+\subsection{a}
+Es gibt einen signifikanten Zusammenhang zwischen Distanz und Zeit, 
+da Pr(>|t|) < 2e-16 ist. 
+
+\subsection{b}
+
+\subsection{c}
+
+\subsection{d}
+
+\subsection{e}
+
+\subsection{f}
+
+\subsection{g}
+
