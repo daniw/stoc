@@ -10,16 +10,64 @@
 \end{Schunk}
 
 \subsection{a}
+Es gibt einen signifikanten Zusammenhang zwischen Distanz und Zeit, 
+da Pr(>|t|) < 2e-16 ist. 
 
 \subsection{b}
+\begin{Schunk}
+\begin{Sinput}
+> 0.18170-0.00173*qt(p=0.975,df=11)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1778923
+\end{Soutput}
+\begin{Sinput}
+> 0.18170+0.00173*qt(p=0.975,df=11)
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1855077
+\end{Soutput}
+\end{Schunk}
+ii
 
 \subsection{c}
+Mittels Formel: 
+\begin{Schunk}
+\begin{Sinput}
+> time[5]-(0.18170*dist[5]+(-62.59296))
+\end{Sinput}
+\begin{Soutput}
+[1] 16.89296
+\end{Soutput}
+\end{Schunk}
+Mit R-Funktionen
+\begin{Schunk}
+\begin{Sinput}
+> residuals(lm(time~dist))[5]
+\end{Sinput}
+\begin{Soutput}
+      5 
+16.8959 
+\end{Soutput}
+\end{Schunk}
 
 \subsection{d}
+Nein
 
 \subsection{e}
+\begin{Schunk}
+\begin{Sinput}
+> sd(residuals(lm(time~dist)))
+\end{Sinput}
+\begin{Soutput}
+[1] 60.01135
+\end{Soutput}
+\end{Schunk}
+Das Modell ist nur für grosse Werte von \verb?time? brauchbar. 
 
 \subsection{f}
+Wahrscheinlich wirkt zusätzlich ein quadratisch wirkender Teil mit. 
 
 \subsection{g}
-
+$Zeit_i 
+= \beta_0 + \beta_1 \cdot Distanz + \beta_2 \cdot Distanz^2 + \epsilon_i$

@@ -12,14 +12,34 @@ Es gibt einen signifikanten Zusammenhang zwischen Distanz und Zeit,
 da Pr(>|t|) < 2e-16 ist. 
 
 \subsection{b}
+<<>>=
+0.18170-0.00173*qt(p=0.975,df=11)
+0.18170+0.00173*qt(p=0.975,df=11)
+@ \\
+ii
 
 \subsection{c}
+Mittels Formel: 
+<<>>=
+time[5]-(0.18170*dist[5]+(-62.59296))
+@ \\
+Mit R-Funktionen
+<<>>=
+residuals(lm(time~dist))[5]
+@
 
 \subsection{d}
+Nein
 
 \subsection{e}
+<<>>=
+sd(residuals(lm(time~dist)))
+@ \\
+Das Modell ist nur für grosse Werte von \verb?time? brauchbar. 
 
 \subsection{f}
+Wahrscheinlich wirkt zusätzlich ein quadratisch wirkender Teil mit. 
 
 \subsection{g}
-
+$Zeit_i 
+= \beta_0 + \beta_1 \cdot Distanz + \beta_2 \cdot Distanz^2 + \epsilon_i$
