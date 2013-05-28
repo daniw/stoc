@@ -5,8 +5,27 @@
 \begin{Sinput}
 > dist=c(100,200,400,800,1000,1500,2000,3000,5000,10000,20000,25000,30000)
 > time=c(9.9,19.8,43.8,103.7,136,213.1,296.2,457.6,793.0,1650.8,3464.4,4495.6,5490.4)
-> # summary(lm(time ~ dist))
+> summary(lm(time ~ dist))
 \end{Sinput}
+\begin{Soutput}
+Call:
+lm(formula = time ~ dist)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-106.95  -24.90   15.77   33.71  102.08 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -62.59296   21.81098   -2.87   0.0152 *  
+dist          0.18170    0.00173  105.05   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
+Residual standard error: 62.68 on 11 degrees of freedom
+Multiple R-squared: 0.999,	Adjusted R-squared: 0.9989 
+F-statistic: 1.103e+04 on 1 and 11 DF,  p-value: < 2.2e-16 
+\end{Soutput}
 \end{Schunk}
 
 \subsection{a}
