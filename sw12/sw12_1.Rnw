@@ -1,3 +1,82 @@
 % coding:utf-8
 
 \section{Aufgabe 1}
+
+\subsection{a}
+<<fig=TRUE>>=
+# forbes <- read.table("http://stat.ethz.ch/Teaching/Datasets/forbes.dat",header=TRUE)
+forbes <- read.table("forbes.dat",header=TRUE)
+plot(forbes[,"Temp"], forbes[,"Press"])
+@
+
+\subsection{b}
+<<fig=TRUE>>=
+forbes.fit <- lm(Press ~ Temp, data = forbes)
+summary(forbes.fit)
+plot(forbes[,"Temp"], forbes[,"Press"])
+abline(forbes.fit)
+@
+
+\subsection{c}
+<<fig=TRUE>>=
+plot(fitted(forbes.fit), resid(forbes.fit), main="Tukey-Anscombe Plot")
+abline(h=0)
+@
+<<fig=TRUE>>=
+qqnorm(resid(forbes.fit))
+qqline(resid(forbes.fit))
+@
+
+\subsection{d}
+<<fig=TRUE>>=
+forbes[,"Logpress"] <- log(forbes[,"Press"])
+plot(forbes[,"Temp"], forbes[,"Logpress"])
+forbes.log.fit <- lm(Logpress ~ Temp, data = forbes)
+abline(forbes.log.fit)
+@
+
+\subsection{e}
+<<fig=TRUE>>=
+plot(fitted(forbes.log.fit), resid(forbes.log.fit), main="Tukey-Anscombe Plot")
+abline(h=0)
+@
+<<fig=TRUE>>=
+qqnorm(resid(forbes.log.fit))
+qqline(resid(forbes.log.fit))
+@
+
+\subsection{f}
+<<fig=TRUE>>=
+plot(fitted(forbes.log.fit), resid(forbes.log.fit), main="Tukey-Anscombe Plot")
+abline(h=0)
+# identify(fitted(forbes.log.fit), resid(forbes.log.fit))
+forbes.korr=forbes[-12]
+@
+<<fig=TRUE>>=
+forbes.korr.fit <- lm(Press ~ Temp, data = forbes.korr)
+# summary(forbes.korr.fit)
+plot(forbes.korr[,"Temp"], forbes.korr[,"Press"])
+abline(forbes.korr.fit)
+@
+<<fig=TRUE>>=
+plot(fitted(forbes.korr.fit), resid(forbes.korr.fit), main="Tukey-Anscombe Plot")
+abline(h=0)
+@
+<<fig=TRUE>>=
+qqnorm(resid(forbes.korr.fit))
+qqline(resid(forbes.korr.fit))
+@
+<<fig=TRUE>>=
+forbes.korr[,"Logpress"] <- log(forbes.korr[,"Press"])
+plot(forbes.korr[,"Temp"], forbes.korr[,"Logpress"])
+forbes.korr.log.fit <- lm(Logpress ~ Temp, data = forbes.korr)
+abline(forbes.korr.log.fit)
+@
+<<fig=TRUE>>=
+plot(fitted(forbes.korr.log.fit), resid(forbes.korr.log.fit), main="Tukey-Anscombe Plot")
+abline(h=0)
+@
+<<fig=TRUE>>=
+qqnorm(resid(forbes.korr.log.fit))
+qqline(resid(forbes.korr.log.fit))
+@
