@@ -12,7 +12,7 @@ plot(forbes[,"Temp"], forbes[,"Press"])
 \subsection{b}
 <<fig=TRUE>>=
 forbes.fit <- lm(Press ~ Temp, data = forbes)
-summary(forbes.fit)
+# summary(forbes.fit)
 plot(forbes[,"Temp"], forbes[,"Press"])
 abline(forbes.fit)
 @

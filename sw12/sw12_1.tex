@@ -16,28 +16,7 @@
 \begin{Schunk}
 \begin{Sinput}
 > forbes.fit <- lm(Press ~ Temp, data = forbes)
-> summary(forbes.fit)
-\end{Sinput}
-\begin{Soutput}
-Call:
-lm(formula = Press ~ Temp, data = forbes)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--0.25717 -0.11246 -0.05102  0.14283  0.64994 
-
-Coefficients:
-             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) -81.06373    2.05182  -39.51   <2e-16 ***
-Temp          0.52289    0.01011   51.74   <2e-16 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
-
-Residual standard error: 0.2328 on 15 degrees of freedom
-Multiple R-squared: 0.9944,	Adjusted R-squared: 0.9941 
-F-statistic:  2677 on 1 and 15 DF,  p-value: < 2.2e-16 
-\end{Soutput}
-\begin{Sinput}
+> # summary(forbes.fit)
 > plot(forbes[,"Temp"], forbes[,"Press"])
 > abline(forbes.fit)
 \end{Sinput}
