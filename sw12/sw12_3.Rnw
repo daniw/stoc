@@ -1,3 +1,14 @@
 % coding:utf-8
 
 \section{Aufgabe 3}
+<<>>=
+d.nebel <- read.table("hubble.dat",header=T,sep=",")
+nebel.v=d.nebel[,2]
+nebel.dist=d.nebel[,3]
+# summary(lm(nebel.dist ~ 0+nebel.v))
+lm(nebel.dist ~ 0+nebel.v)
+alter=979.8*0.001922 # Alter in Milliarden Jahren
+alter
+0.3990982+qt(p=0.025,df=22)*0.1184697
+0.3990982+qt(p=0.975,df=22)*0.1184697
+@

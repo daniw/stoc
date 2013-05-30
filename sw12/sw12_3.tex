@@ -1,3 +1,39 @@
 % coding:utf-8
 
 \section{Aufgabe 3}
+\begin{Schunk}
+\begin{Sinput}
+> d.nebel <- read.table("hubble.dat",header=T,sep=",")
+> nebel.v=d.nebel[,2]
+> nebel.dist=d.nebel[,3]
+> # summary(lm(nebel.dist ~ 0+nebel.v))
+> lm(nebel.dist ~ 0+nebel.v)
+\end{Sinput}
+\begin{Soutput}
+Call:
+lm(formula = nebel.dist ~ 0 + nebel.v)
+
+Coefficients:
+ nebel.v  
+0.001922  
+\end{Soutput}
+\begin{Sinput}
+> alter=979.8*0.001922 # Alter in Milliarden Jahren
+> alter
+\end{Sinput}
+\begin{Soutput}
+[1] 1.883176
+\end{Soutput}
+\begin{Sinput}
+> 0.3990982+qt(p=0.025,df=22)*0.1184697
+\end{Sinput}
+\begin{Soutput}
+[1] 0.1534071
+\end{Soutput}
+\begin{Sinput}
+> 0.3990982+qt(p=0.975,df=22)*0.1184697
+\end{Sinput}
+\begin{Soutput}
+[1] 0.6447893
+\end{Soutput}
+\end{Schunk}
